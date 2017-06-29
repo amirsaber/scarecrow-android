@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "1088015417408",
+    "firebase_url": "https://scarecrow-aafc8.firebaseio.com",
+    "project_id": "scarecrow-aafc8",
+    "storage_bucket": "scarecrow-aafc8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088015417408:android:38a519fb70b42ad9",
+        "android_client_info": {
+          "package_name": "com.example.amirsaber.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1088015417408-6mlthb58mhrerkjidt4d9j1s1a15ndhj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.amirsaber.myapplication",
+            "certificate_hash": "1abbfa57083e265119c1cb4fd6e517516ee38bdd"
+          }
+        },
+        {
+          "client_id": "1088015417408-6n9fvqv44b0oi3u7fb5g6pjet1pdjv1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmRDd9KHlyf20PJbpzjkgnsUdiiMIzq6M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1088015417408-6n9fvqv44b0oi3u7fb5g6pjet1pdjv1a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088015417408:android:593a10475cd9171f",
+        "android_client_info": {
+          "package_name": "com.geekofwallstreet.scarecrow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1088015417408-0330l0ccr8v3pq6v6pue8v5e29qem08t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.geekofwallstreet.scarecrow",
+            "certificate_hash": "1abbfa57083e265119c1cb4fd6e517516ee38bdd"
+          }
+        },
+        {
+          "client_id": "1088015417408-6n9fvqv44b0oi3u7fb5g6pjet1pdjv1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmRDd9KHlyf20PJbpzjkgnsUdiiMIzq6M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1088015417408-6n9fvqv44b0oi3u7fb5g6pjet1pdjv1a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
