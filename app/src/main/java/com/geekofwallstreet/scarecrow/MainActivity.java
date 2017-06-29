@@ -1,23 +1,33 @@
 package com.geekofwallstreet.scarecrow;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.LinearLayoutManager;
 
 import com.google.firebase.database.*;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     private static final String TAG = "MainActivity";
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final TextView orderTextView = (TextView) findViewById(R.id.textView);
+        mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+
+        mRecyclerView.setHasFixedSize(true);
+
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("Orders");
@@ -25,15 +35,18 @@ public class MainActivity extends AppCompatActivity {
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                orderTextView.setText("");
+                ArrayList<Order> dataSet = new ArrayList<Order>();
+                Integer i = 0;
                 Iterator<DataSnapshot> dIterator = dataSnapshot.getChildren().iterator();
                 while (dIterator.hasNext()) {
                     DataSnapshot orderDataSnapshot = dIterator.next();
                     Order order = orderDataSnapshot.getValue(Order.class);
-                    orderTextView.append(order.toString() + "\n");
-                    orderTextView.append("============\n");
+                    dataSet.add(i, order);
+                    i++;
                     Log.d(TAG, "Value is: " + order.toString());
                 }
+                mAdapter = new MyAdapter(dataSet);
+                mRecyclerView.setAdapter(mAdapter);
             }
 
             @Override
